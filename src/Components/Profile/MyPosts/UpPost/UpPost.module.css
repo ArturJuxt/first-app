@@ -1,0 +1,14 @@
+.UpPost {
+    grid-area: c;  
+    height: 450px;
+}
+
+.fon img {
+    width: 1000px;
+    height: 200px;
+}
+
+.avatar img {
+    width: 70px;
+    height: 70px;
+}

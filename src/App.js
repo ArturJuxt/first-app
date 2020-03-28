@@ -1,14 +1,24 @@
 import React from 'react';
-import Header from './Components/Header'
-import NavBar from "./Components/NavBar";
+import "./App.css";
+import Header from './Components/Header/Header';
+import Navbar from "./Components/Navbar/Navbar";
+import Profile from "./Components/Profile/Profile";
+import Dialog from './Components/Dialog/Dialog';
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <NavBar />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Navbar />
+        <div className='App-Content'>
+          <Route path='/profile' Component={Profile} />
+          <Route path='/dialog' Component={Dialog} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
