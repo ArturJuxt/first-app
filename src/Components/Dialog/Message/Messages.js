@@ -5,7 +5,7 @@ function Messages (props) {
     return (
        <div className={s.messages}>
             <div>
-                {props.messages}
+                {props.message}
             </div>
        </div>
     );

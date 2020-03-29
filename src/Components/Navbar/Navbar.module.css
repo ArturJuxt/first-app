@@ -4,16 +4,15 @@
     padding: 10px;
 }
 
-.navbar a {
-    text-decoration: none;
+.item {
+    padding: 5px;
 }
 
 .item a {
+    text-decoration: none;
     color: white;
 }
 
-
-
-.active {
+.active a {
     color: red;
 }
