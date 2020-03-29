@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
 import s from "./Navbar.module.css"
 
 function Navbar() {
@@ -9,7 +10,7 @@ function Navbar() {
                <h1>Judo</h1>
             </div>
            <div className={s.item}>
-               <a href='/profile'>Profile</a>
+               <Link to="/profile">Profile</Link>
             </div>
            <div className={`${s.item} ${s.active}`}>
               <a href='/dialog'>Message</a>

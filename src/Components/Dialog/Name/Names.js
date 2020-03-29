@@ -1,15 +1,12 @@
 import React from 'react';
 import s from './Names.module.css';
 
-function Names () {
+function Names (props) {
     return (
        <div className={s.nemes}>
-           <div>Artur</div>
-           <div>Edgar</div>
-           <div>Narek</div>
-           <div>Tiko</div>
-           <div>Aram</div>
-           <div>Hayko</div>
+           <div>
+               {props.names}
+            </div>
        </div>
     );
 }

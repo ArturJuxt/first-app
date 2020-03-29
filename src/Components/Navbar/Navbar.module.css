@@ -8,9 +8,11 @@
     text-decoration: none;
 }
 
-.item {
+.item a {
     color: white;
 }
+
+
 
 .active {
     color: red;

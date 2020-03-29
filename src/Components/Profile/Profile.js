@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./Profile.module.css";
+import "./Profile.module.css";
 import UpPost from './MyPosts/UpPost/UpPost';
 import DownPost from './MyPosts/DownPost/DownPost';
 
