@@ -1,28 +1,28 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import s from "./Navbar.module.css"
 
 function Navbar() {
 
     return (
         <div className={s.navbar}>
-           <div>
-               <h1>Judo</h1>
+            <div>
+                <h1>Judo</h1>
             </div>
-           <div className={s.item}>
-               <Link to="/profile">Profile</Link>
+            <div className={s.item}>
+                <Link to="/profile">Profile</Link>
             </div>
-           <div className={`${s.item} ${s.active}`}>
-              <a href='/dialog'>Message</a>
+            <div className={`${s.item} ${s.active}`}>
+                <Link to="/dialog">Dialog</Link>
             </div>
-           <div className={s.item}>
-               <navlink><a href="/news">News</a></navlink>
+            <div className={s.item}>
+                <Link to="/news">News</Link>
             </div>
-           <div className={s.item}>
-               <navlink><a href="/music">Music</a></navlink>
+            <div className={s.item}>
+                <Link to="/music">Music</Link>
             </div>
-           <div className={s.item}>
-               <navlink><a href="/setings">Setings</a></navlink>
+            <div className={s.item}>
+                <Link to="/settings">Settings</Link>
             </div>
         </div>
     );
