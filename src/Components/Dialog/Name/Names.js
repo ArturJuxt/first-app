@@ -4,7 +4,7 @@ import s from './Names.module.css';
 function Names (props) {
     console.log(props);
     return (
-       <div className={s.nemes}>
+       <div className={s.names}>
            <div>
                {props.names}
             </div>
