@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Profile from './Components/Profile/Profile';
@@ -10,7 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 
-function App() {
+function App(props) {
 
   return (
     <BrowserRouter>
@@ -19,12 +19,10 @@ function App() {
         <Navbar />
         <div className='app-content'>
           <Switch>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/dialog">
-              <Dialog />
-            </Route>
+            <Route path="/profile"
+              render={() => <Profile posts={props.appState.posts} />} />
+            <Route path="/dialog"
+              render={() => <Dialog users={props.appState.users} messages={props.appState.messages} />} />
           </Switch>
         </div>
       </div>

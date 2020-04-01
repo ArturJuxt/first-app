@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.header {
+    grid-area: h;
+    background-color: $main-color;
+    width: 1200px;   
+
+    img {
+        width: 60px; 
+        height: 60px;
+    }
+}

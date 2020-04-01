@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import s from "./Navbar.module.css"
 
 function Navbar() {
@@ -10,19 +10,19 @@ function Navbar() {
                 <h1>Judo</h1>
             </div>
             <div className={s.item}>
-                <Link to="/profile">Profile</Link>
-            </div>
-            <div className={`${s.item} ${s.active}`}>
-                <Link to="/dialog">Dialog</Link>
+                <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
             </div>
             <div className={s.item}>
-                <Link to="/news">News</Link>
+                <NavLink to="/dialog" activeClassName={s.activeLink}>Dialog</NavLink>
             </div>
             <div className={s.item}>
-                <Link to="/music">Music</Link>
+                <NavLink to="/news" activeClassName={s.activeLink}>News</NavLink>
             </div>
             <div className={s.item}>
-                <Link to="/settings">Settings</Link>
+                <NavLink to="/music" activeClassName={s.activeLink}>Music</NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
             </div>
         </div>
     );

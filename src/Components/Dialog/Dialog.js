@@ -1,38 +1,22 @@
 import React from 'react';
-import s from './Dialog.module.css';
-import Names from './Name/Names';
-import Messages from './Message/Messages';
-import {
-    BrowserRouter,
-    Switch,
-    Route,
-} from "react-router-dom";
+import s from './Dialog.module.scss';
+import DialogName from './Names/Names';
+import DialogMessage from './Messages/Messages';
 
+function Dialog(props) {
 
-function Dialog() {
+    let nameElements = props.users.map( u => <DialogName name={u.name} id={u.id} />);
+    let messageElements = props.messages.map( m => <DialogMessage message={m.message} id={m.id} />);
+    
     return (
-        <BrowserRouter>
-            <div className={s.dialog}>
-                <Switch>
-                    <div>
-                        <Route><Names name='Artur' id='1' /></Route>
-                        <Route><Names name='Edgar' id='2' /></Route>
-                        <Route><Names name='Narek' id='3' /></Route>
-                        <Route><Names name='Aram' id='4' /></Route>
-                        <Route><Names name='Tiko' id='5' /></Route>
-                        <Route><Names name='Hayko' id='6' /></Route>
-                    </div>
-                </Switch>
-                <Switch>
-                    <div>
-                        <Route><Messages message='message 1' /></Route>
-                        <Route><Messages message='message 2' /></Route>
-                        <Route><Messages message='message 3' /></Route>
-                        <Route><Messages message='message 3' /></Route>
-                    </div>
-                </Switch>
+        <div className={s.dialogs}>
+            <div className={s.dialog_N}>
+                { nameElements }
             </div>
-        </BrowserRouter>
+            <div className={s.Dialog_M}>
+                { messageElements }
+            </div>
+        </div>
     );
 }
 

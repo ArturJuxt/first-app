@@ -6,6 +6,8 @@ function DownPost (props) {
        <div className={s.DownPost}>
             <div className={s.item}>
                 {props.message}
+                <span>Like</span>
+                {props.likeCount}
             </div>
         </div>
     );

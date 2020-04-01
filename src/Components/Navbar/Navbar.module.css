@@ -1,7 +1,7 @@
 .navbar {
     grid-area: n;   
     background-color: green;
-    padding: 10px;
+    padding: 20px;
 }
 
 .item {
@@ -11,8 +11,9 @@
 .item a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
 }
 
-.active a {
-    color: red;
+.item a.activeLink {
+    color: chocolate;
 }
