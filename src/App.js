@@ -1,10 +1,11 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Profile from './Components/Profile/Profile';
 import Dialog from './Components/Dialog/Dialog';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Todo from './Components/Todo/Todo';
 
 function App(props) {
   return (
@@ -22,6 +23,7 @@ function App(props) {
               path="/dialog"
               render={() => (
                 <Dialog
+                  store={props.store}
                   users={props.appState.users}
                   messages={props.appState.messages}
                 />
@@ -29,6 +31,7 @@ function App(props) {
             />
           </Switch>
         </div>
+        <Todo />
       </div>
     </BrowserRouter>
   );

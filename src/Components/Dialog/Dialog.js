@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Dialog.module.scss';
 import DialogName from './Names/Names';
 import DialogMessage from './Messages/Messages';
+import NewMessage from './NewMessage/NewMessage';
 
 function Dialog(props) {
   const { users, messages } = props;
@@ -13,7 +14,10 @@ function Dialog(props) {
   return (
     <div className={s.dialogs}>
       <div className={s.dialog_N}>{nameElements}</div>
-      <div className={s.Dialog_M}>{messageElements}</div>
+      <div>
+        <div className={s.Dialog_M}>{messageElements}</div>
+        <NewMessage />
+      </div>
     </div>
   );
 }
