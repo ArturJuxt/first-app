@@ -1,5 +1,5 @@
 import React from 'react';
-import './Todo.module.scss';
+import s from './Todo.module.scss';
 import TodoList from './TodoList/TodoList';
 import Context from './Context/Context';
 import AddTodo from './AddTodo/AddTodo';
@@ -40,7 +40,7 @@ function Todo() {
 
   return (
     <Context.Provider value={{ removeTodo }}>
-      <div>
+      <div className={s.todo}>
         <h2>React Todo</h2>
         <AddTodo onCreate={addTodo} />
         {todos.length ? (

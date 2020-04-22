@@ -8,6 +8,7 @@ import Dialog from './Components/Dialog/Dialog';
 import Todo from './Components/Todo/Todo';
 import Car from './Components/Car/Car';
 import Koktel from './Components/Koktel/Koktel';
+import TodoApp from './Components/useState/TodoApp';
 
 function App(props) {
   return (
@@ -40,6 +41,7 @@ function App(props) {
           <Todo />
           <Car />
           <Koktel />
+          <TodoApp />
         </div>
       </div>
     </BrowserRouter>

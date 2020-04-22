@@ -1,12 +1,14 @@
 import React from 'react';
-import s from './Koktel-Item.scss';
+import s from './Koktel-Item.module.scss';
 
 function KoktelItem(props) {
   return (
     <div className={s.koktelItem}>
-      <li>
+      <li className={s.itemLi}>
         {props.water}
-        <button type="button" onClick={props.onDelete}>Del</button>
+        <button type="button" onClick={props.onDelete}>
+          Del
+        </button>
       </li>
     </div>
   );

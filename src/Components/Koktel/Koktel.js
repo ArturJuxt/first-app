@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from './Koktel.scss';
+import s from './Koktel.module.scss';
 import KoktelItem from './Koktel-Item/Koktel-Item';
 
 const todoItem = {
@@ -19,6 +19,21 @@ function Koktel() {
     setCocktails(newCocktails);
   };
 
+  const [todoTitle, setTodoTitle] = useState('');
+
+  const addTodo = (event) => {
+    if (event.key === 'Enter') {
+      setCocktails([
+        ...cocktails,
+        {
+          id: Date.now(),
+          water: todoTitle,
+        },
+      ]);
+
+      setTodoTitle('');
+    }
+  };
   const cocktailsEl = cocktails.map((cocktail) => (
     <KoktelItem
       key={cocktail.id}
@@ -33,6 +48,12 @@ function Koktel() {
   return (
     <div className={s.koktel}>
       <h2>Kokteyls</h2>
+      <input
+        type="text"
+        value={todoTitle}
+        onChange={(event) => setTodoTitle(event.target.value)}
+        onKeyPress={addTodo}
+      />
       {cocktailsEl}
     </div>
   );
