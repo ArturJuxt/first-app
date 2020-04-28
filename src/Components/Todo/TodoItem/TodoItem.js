@@ -1,16 +1,24 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { deleteTodo, toggleTodo } from '../../../Actions';
 import s from './TodoItem.module.scss';
-import Context from '../Context/Context';
 
-function TodoItem({ todo, index, onChange }) {
-  const { removeTodo } = useContext(Context);
+function TodoItem({ todo, index }) {
+  const dispatch = useDispatch();
+
   const classes = [];
   if (todo.completed) {
     classes.push(s.done);
   }
 
-  const handleChange = () => onChange(todo.id);
+  function handleDeleteTodo() {
+    dispatch(deleteTodo(todo.id));
+  }
+
+  function handleToggleTodo() {
+    dispatch(toggleTodo(todo.id));
+  }
 
   return (
     <li className={s.itemLi}>
@@ -18,13 +26,13 @@ function TodoItem({ todo, index, onChange }) {
         <input
           type="checkbox"
           checked={todo.complect}
-          onChange={handleChange}
+          onChange={handleToggleTodo}
         />
         <strong>{index + 1}</strong>
         &nbsp;
         {todo.title}
       </span>
-      <button type="button" onClick={() => removeTodo(todo.id)}>
+      <button type="button" onClick={handleDeleteTodo}>
         &times;
       </button>
     </li>
@@ -34,7 +42,6 @@ function TodoItem({ todo, index, onChange }) {
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired,
   index: PropTypes.number, // eslint-disable-line
-  onChange: PropTypes.func.isRequired,
 };
 
 export default TodoItem;

@@ -24,8 +24,8 @@ function Navbar() {
         </NavLink>
       </div>
       <div className={s.item}>
-        <NavLink to="/music" activeClassName={s.activeLink}>
-          Music
+        <NavLink to="/book" activeClassName={s.activeLink}>
+          Book
         </NavLink>
       </div>
       <div className={s.item}>

@@ -13,6 +13,7 @@ import Koktel from './Components/Koktel/Koktel';
 import TodoApp from './Components/useState/TodoApp';
 import News from './Components/News/News';
 import reducer from './Reducer';
+import Book from './Components/Book/Book';
 
 const store = createStore(reducer);
 
@@ -41,6 +42,7 @@ function App(props) {
                   )}
                 />
                 <Route path="/news" render={() => <News />} />
+                <Route path="/book" render={() => <Book />} />
               </Switch>
             </div>
           </div>

@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 import Counter from './Counter';
-import { inc, dec, rnd } from './Actions';
+import { inc, dec, rnd } from '../../../Actions';
 
 function CounterWrapper() {
-  const count = useSelector((state) => state);
-
+  const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
 
   return (
