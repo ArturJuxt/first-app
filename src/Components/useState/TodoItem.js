@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 
-function TodoItem({ title, id, completed }) {
+function TodoItem({ title, completed }) {
   const [checked, setChecked] = useState(completed);
 
   const cls = ['todo'];

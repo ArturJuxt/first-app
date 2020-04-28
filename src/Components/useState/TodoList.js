@@ -5,7 +5,7 @@ function TodoList({ todos }) {
   return (
     <ul>
       {todos.map((item) => (
-        <TodoItem key={item.id} {...item} />
+        <TodoItem key={item.id} title={item.title} completed={item.completed} />
       ))}
     </ul>
   );

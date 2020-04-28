@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import s from './TodoList.module.scss';
 import TodoItem from '../TodoItem/TodoItem';
 
@@ -19,10 +18,5 @@ function TodoList(props) {
     </ul>
   );
 }
-
-TodoItem.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onToggle: PropTypes.func.isRequired,
-};
 
 export default TodoList;

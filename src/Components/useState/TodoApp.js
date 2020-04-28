@@ -36,7 +36,11 @@ function TodoApp() {
         />
         <label>Tado name</label>
       </div>
-      <TodoList todos={todos} />
+      {todos.length ? (
+        <TodoList todos={todos} onToggle={() => {}} />
+      ) : (
+        <p>No Todos !</p>
+      )}
     </div>
   );
 }
