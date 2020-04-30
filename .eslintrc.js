@@ -24,6 +24,8 @@ module.exports = {
     'react/forbid-prop-types': [0, { forbid: ['any'] }],
     'react/prop-types': 0,
     'react/destructuring-assignment': 0,
+    'jsx-a11y/interactive-supports-focus': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
   },
   env: {
     jest: true,
