@@ -14,6 +14,7 @@ import TodoApp from './Components/useState/TodoApp';
 import News from './Components/News/News';
 import reducer from './Reducer';
 import Book from './Components/Book/Book';
+import BookContext from './Components/BookContext/BookContext';
 
 const store = createStore(reducer);
 
@@ -43,6 +44,7 @@ function App(props) {
                 />
                 <Route path="/news" render={() => <News />} />
                 <Route path="/book" render={() => <Book />} />
+                <Route path="/bookcontext" render={() => <BookContext />} />
               </Switch>
             </div>
           </div>

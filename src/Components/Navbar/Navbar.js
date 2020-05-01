@@ -15,17 +15,22 @@ function Navbar() {
       </div>
       <div className={s.item}>
         <NavLink to="/dialog" activeClassName={s.activeLink}>
-          Dialog
+          Message
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/news" activeClassName={s.activeLink}>
-          News
+          Counter
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/book" activeClassName={s.activeLink}>
           Book
+        </NavLink>
+      </div>
+      <div className={s.item}>
+        <NavLink to="/bookcontext" activeClassName={s.activeLink}>
+          BookContext
         </NavLink>
       </div>
       <div className={s.item}>
