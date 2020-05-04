@@ -34,6 +34,11 @@ function Navbar() {
         </NavLink>
       </div>
       <div className={s.item}>
+        <NavLink to="/song" activeClassName={s.activeLink}>
+          Song
+        </NavLink>
+      </div>
+      <div className={s.item}>
         <NavLink to="/settings" activeClassName={s.activeLink}>
           Settings
         </NavLink>

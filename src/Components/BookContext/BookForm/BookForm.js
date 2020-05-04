@@ -11,7 +11,7 @@ const BookForm = () => {
     addBook(title, author);
     setTitle('');
     setAuthor('');
-  }
+  };
   return (
     <form className={s.form} onSubmit={handleSubmit}>
       <input
